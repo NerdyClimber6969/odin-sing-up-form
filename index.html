@@ -20,7 +20,7 @@
                 <p>
                     You <i>know</i> you want to.
                 </p>
-            </div>
+            </div>  
 
             <form class="signup-form" action="example.com/testing" method="post">
                 <div class="input-area">
@@ -50,11 +50,13 @@
                     <fieldset>
                         <div class="cell-wrapper">
                             <label for="user-password">PASSWORD</label>
-                            <input type="password" id="user-password" name="user-password" required>
+                            <input type="password" id="user-password" name="user-password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required>
+                            <div></div>
                         </div>
                         <div class="cell-wrapper">
                             <label for="confirm">CONFIRM PASSWORD</label>
-                            <input type="password" id="confirm" name="confirm" required>    
+                            <input type="password" id="confirm" name="confirm" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required>
+                            <div></div>
                         </div>
                     </fieldset>
                 </div>

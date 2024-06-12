@@ -85,7 +85,7 @@ form {
     background-color: white;
     gap: 1rem;
     box-shadow: 0 0 10px lightgray;
-    padding: 1.5rem 0;
+    padding: 1.5rem 0 2.5rem 0;
     margin: 0 0 2rem 0;
 }
 
@@ -102,7 +102,7 @@ form {
     flex-direction: column;
     font-size: 0.8rem;
     gap: 5px;
-    width: calc(100% / 3);
+    width: 45%;
     height: 70px
 }
 
@@ -137,10 +137,18 @@ input[type="email"]:user-invalid + div::before {
     content: "@ is expected in email address";
     color: red;
     font-size: 15px;
+    overflow: hidden;
 }
 
 input[type="tel"]:user-invalid + div::before {
     content: "Phone number must consist of 8 digits";
+    color: red;
+    font-size: 15px;
+}
+
+#user-password:user-invalid + div::before,
+#confirm:user-invalid + div::before {
+    content:"Must at least consist of 8 characters, at least one letter and one number";
     color: red;
     font-size: 15px;
 }
@@ -183,4 +191,8 @@ a {
     .right-side {
         width: 100%;
     }
+
+    /* .cell-wrapper {
+        width: calc(45%)
+    } */
 }
